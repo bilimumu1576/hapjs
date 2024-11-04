@@ -15,6 +15,8 @@ jobs:
     container: gengjiawen/android-ndk:qa-2020-07-31
     steps:
       - uses: actions/checkout@v2
+        with:
+          node-version: '16'  # 或你需要的版本
         # 构建程序 打包
       - run: |
           cd ./mockup/platform/android
